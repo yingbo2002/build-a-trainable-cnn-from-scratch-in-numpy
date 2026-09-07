@@ -54,8 +54,11 @@ def one_hot(labels, num_classes):
     return np.eye(num_classes, dtype=float)[labels]
     pass
 
-# Step 7 - gather_true_class_probs (not yet solved)
-# TODO: implement
+# Step 7 - gather_true_class_probs
+def gather_true_class_probs(probs, labels):
+    # TODO: return probs[i, labels[i]] for every row i as a 1D length-N array.
+    return probs[np.arange(len(labels)), labels]
+    pass
 
 # Step 8 - cross_entropy_loss (not yet solved)
 # TODO: implement
